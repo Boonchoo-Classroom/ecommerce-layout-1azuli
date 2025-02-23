@@ -5,31 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@drawable/bg_gradient"
     tools:context=".ui.ProfileFragment">
 
     <!-- รูปโปรไฟล์ -->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/ic_user_avatar"
-        android:scaleType="centerCrop"
-        android:background="@drawable/profile_image_border"
-        android:layout_marginTop="40dp"
+        android:elevation="4dp"
+        android:layout_marginTop="50dp"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- การ์ดข้อมูลโปรไฟล์ -->
+    <!-- CardView โปรไฟล์ -->
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:padding="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        android:background="@color/beige"
+        android:padding="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/profileImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="16dp"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
@@ -46,10 +47,10 @@
                 android:id="@+id/profileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tyler Okonma"
+                android:text="Tyler Aconma"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/profileEmail"
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="user@email.com"
                 android:textSize="16sp"
-                android:textColor="@color/white"
+                android:textColor="@color/dark_gray"
                 android:layout_marginTop="4dp"/>
 
             <!-- เส้นแบ่ง -->
@@ -70,10 +71,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="สถานที่จัดส่ง"
+                android:text="📍 สถานที่จัดส่ง"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/profileAddress"
@@ -81,11 +82,21 @@
                 android:layout_height="wrap_content"
                 android:text="123/4 หมู่ 5 ถนนตัวอย่าง ตำบล/แขวง ตัวอย่าง เขต/อำเภอ จังหวัด 12345"
                 android:textSize="14sp"
-                android:textColor="@color/white"
+                android:textColor="@color/dark_gray"
                 android:layout_marginTop="4dp"
                 android:gravity="center"/>
+
+            <!-- ปุ่มแก้ไขโปรไฟล์ -->
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="แก้ไขโปรไฟล์"
+                android:textSize="14sp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

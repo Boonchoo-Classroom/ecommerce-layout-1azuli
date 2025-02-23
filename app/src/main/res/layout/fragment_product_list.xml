@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/light_gray"
     android:padding="16dp">
 
     <TextView
@@ -10,6 +11,7 @@
         android:layout_height="wrap_content"
         android:text="รายการสินค้า"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:paddingBottom="10dp" />
 
